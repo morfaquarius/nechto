@@ -23,9 +23,9 @@ body {
 }
 body {
   color: $mainColor;
-  line-height: 1;
+  line-height: $lineHeight;
   font-family: $fontFamily;
-  font-size: $fontSize;
+  @include adaptiveValue("font-size", 24, 16);
   font-weight: $fontWeight;
   //text-rendering: optimizeLegibility;
   -ms-text-size-adjust: 100%;

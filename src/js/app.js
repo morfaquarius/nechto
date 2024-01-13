@@ -190,7 +190,7 @@ autoHeight: false
 // Модуль поэкранной прокрутки
 // Документация: https://template.fls.guru/template-docs/modul-poekrannoj-prokrutki-stranicy-fullpage.html
 // Сниппет(HTML):
-// import './libs/fullpage.js'
+//import './libs/fullpage.js'
 
 // Модуль параллакса
 // Документация: https://template.fls.guru/template-docs/paralaks-pri-skroli.html

@@ -1,5 +1,44 @@
 //====================================================================================================
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background: rgba(43, 43, 43, 0.7);
+  backdrop-filter: blur(22px);
+  &__container {
+  }
+  &__menu {
+  }
+}
+.menu {
+  &__body {
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 75px;
+    text-align: center;
+    @include adaptiveValue("min-height", 70, 46);
+    align-items: center;
+    @media (max-width: $mobileSmall) {
+      gap: 0;
+      justify-content: space-between;
+    }
+  }
+  &__item {
+    @media (max-width: $mobileSmall) {
+    }
+  }
+  &__link {
+    @include adaptiveValue("font-size", 22, 18);
+    color: #fff;
+    font-weight: 400;
+  }
+}
+
 //====================================================================================================
 
 //Burger

@@ -1,12 +1,15 @@
 //====================================================================================================
 .hero-section {
-  @include adaptiveValue("padding-top", 267, 265, 0, 1920, 1200);
-
-  @media (max-width: em(1200)) {
-    @include adaptiveValue("padding-top", 190, 220, 0, 1200, 1032);
+  @include adaptiveValue("padding-top", 267, 240, 0, 1920, 1635);
+  @media (max-width: em(1635)) {
+    @include adaptiveValue("padding-top", 240, 270, 0, 1516, 1201);
   }
+  @media (max-width: em(1200)) {
+    padding-top: 200px;
+  }
+
   @media (max-width: $tablet) {
-    @include adaptiveValue("padding-top", 225, 114, 0, 991.98, 360);
+    @include adaptiveValue("padding-top", 200, 114, 0, 991.98, 360);
   }
   @media (max-width: $mobile) {
     padding-bottom: toRem(30);
@@ -14,40 +17,35 @@
   position: relative;
   display: flex;
   align-items: center;
-  &::after {
+  &::before {
     content: "";
     width: 807px;
-    height: 953px;
+    height: 950px;
     position: absolute;
-    @include adaptiveValue("top", 0, -140, 0, 1920, 991.98);
-    @include adaptiveValue("left", 0, -60, 0, 1920, 991.98);
+    @include adaptiveValue("top", 0, -50, 0, 1920, 991.98);
+    left: 0;
+    @include adaptiveValue("left", 0, -40, 0, 1920, 1613);
+    @media (max-width: em(1613)) {
+      @include adaptiveValue("left", -40, -105, 0, 1613, 991.98);
+    }
     background: url("@img/icons/decor1.svg") 0 0 no-repeat;
     user-select: none;
     z-index: -1;
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       display: none;
     }
-    @media (max-width: $tablet) {
-      height: 1200px;
-      @include adaptiveValue("top", -160, -200, 0, 991.98, 767.98);
-    }
   }
-  &::before {
+  &::after {
     content: "";
     position: absolute;
     top: 0;
-    right: 0;
+    @include adaptiveValue("right", 0, -285, 0, 1920, 991.98);
     user-select: none;
     z-index: -1;
     background: url("@img/icons/decor2.svg") 0 0 no-repeat;
-    @include adaptiveValue("width", 812, 520, 0, 1920, 991.98);
-    @include adaptiveValue("height", 953, 815, 0, 1920, 991.98);
+    height: 950px;
+    width: 735px;
     @media (max-width: $tablet) {
-      width: 620px;
-      @include adaptiveValue("height", 790, 750, 0, 991.98, 767.98);
-      top: 250px;
-    }
-    @media (max-width: $mobile) {
       display: none;
     }
   }

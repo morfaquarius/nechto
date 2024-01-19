@@ -1,37 +1,51 @@
 //====================================================================================================
 .hero-section {
-  @include adaptiveValue("padding-top", 267, 220, 0, 1920, 1200);
-  padding-bottom: toRem(377);
+  @include adaptiveValue("padding-top", 267, 265, 0, 1920, 1200);
 
   @media (max-width: em(1200)) {
-    @include adaptiveValue("padding-top", 160, 170, 0, 1200, 1032);
+    @include adaptiveValue("padding-top", 190, 220, 0, 1200, 1032);
   }
   @media (max-width: $tablet) {
     @include adaptiveValue("padding-top", 225, 114, 0, 991.98, 360);
-    @include adaptiveValue("padding-bottom", 150, 22, 0, 991.98, 360);
+  }
+  @media (max-width: $mobile) {
+    padding-bottom: toRem(30);
   }
   position: relative;
   display: flex;
   align-items: center;
-  &__decor-left {
+  &::after {
+    content: "";
+    width: 807px;
+    height: 953px;
     position: absolute;
-    @include adaptiveValue("top", 0, -205, 0, 1920, 991.98);
+    @include adaptiveValue("top", 0, -140, 0, 1920, 991.98);
     @include adaptiveValue("left", 0, -60, 0, 1920, 991.98);
+    background: url("@img/icons/decor1.svg") 0 0 no-repeat;
     user-select: none;
     z-index: -1;
     @media (max-width: $mobile) {
       display: none;
     }
+    @media (max-width: $tablet) {
+      height: 1200px;
+      @include adaptiveValue("top", -160, -200, 0, 991.98, 767.98);
+    }
   }
-  &__decor-right {
+  &::before {
+    content: "";
     position: absolute;
-    @include adaptiveValue("right", 0, -230, 0, 1920, 991.98);
-    @include adaptiveValue("top", 0, 310, 0, 1920, 991.98);
+    top: 0;
+    right: 0;
     user-select: none;
     z-index: -1;
-    img {
-      @include adaptiveValue("width", 812, 812, 0, 1920, 991.98);
-      @include adaptiveValue("height", 1095, 756, 0, 1920, 991.98);
+    background: url("@img/icons/decor2.svg") 0 0 no-repeat;
+    @include adaptiveValue("width", 812, 520, 0, 1920, 991.98);
+    @include adaptiveValue("height", 953, 815, 0, 1920, 991.98);
+    @media (max-width: $tablet) {
+      width: 620px;
+      @include adaptiveValue("height", 790, 750, 0, 991.98, 767.98);
+      top: 250px;
     }
     @media (max-width: $mobile) {
       display: none;
@@ -80,7 +94,8 @@
   }
   &__arrow-button {
     position: absolute;
-    bottom: -100px;
+    bottom: -50px;
+
     left: 50%;
     transform: translate(-50%, 0);
     animation: moveUpDown 1s ease-in-out infinite; /* Назначаем анимацию */
@@ -128,6 +143,7 @@
 
 //====================================================================================================
 .about-section {
+  @include adaptiveValue("padding-top", 190, 84);
   display: flex;
   align-items: center;
   &__container {
@@ -189,8 +205,6 @@
 .content-about {
   text-align: center;
   &__title {
-    font-size: toRem(48);
-    font-weight: 600;
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 50, 30);
     }
@@ -217,3 +231,4 @@
     }
   }
 }
+//========================================================================================================================================================

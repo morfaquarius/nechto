@@ -36,6 +36,12 @@
     @include adaptiveValue("font-size", 22, 18);
     color: #fff;
     font-weight: 400;
+    transition: all 0.3s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
   }
 }
 

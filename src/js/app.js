@@ -185,12 +185,12 @@ autoHeight: false
 // Наблюдатель за объектами с атрибутом data-watch
 // Документация: https://template.fls.guru/template-docs/modul-nabljudatel-za-poyavleniem-elementa-pri-skrolle.html
 // Сниппет(HTML):
-// import './libs/watcher.js'
+import './libs/watcher.js'
 
 // Модуль поэкранной прокрутки
 // Документация: https://template.fls.guru/template-docs/modul-poekrannoj-prokrutki-stranicy-fullpage.html
 // Сниппет(HTML):
-//import './libs/fullpage.js'
+import './libs/fullpage.js'
 
 // Модуль параллакса
 // Документация: https://template.fls.guru/template-docs/paralaks-pri-skroli.html

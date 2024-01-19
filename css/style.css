@@ -368,7 +368,6 @@ h6 {
 .hero-section::after {
   content: "";
   position: absolute;
-  top: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -624,6 +623,12 @@ h6 {
   }
 }
 
+@media (min-width: 118.75em) {
+  .hero-section::after {
+    top: 0.0000000625rem;
+  }
+}
+
 @media (min-width: 120em) {
   .hero-section {
     padding-top: 16.6875rem;
@@ -723,7 +728,11 @@ h6 {
   }
 
   .hero-section::after {
-    right: -17.8125rem;
+    top: -11.25rem;
+  }
+
+  .hero-section::after {
+    right: -18.75rem;
   }
 
   .hero-section::after {
@@ -776,7 +785,11 @@ h6 {
   }
 
   .hero-section {
-    padding-bottom: 1.875rem;
+    padding-bottom: 3.75rem;
+  }
+
+  .about-section {
+    padding-bottom: 3.75rem;
   }
 
   .image-about {
@@ -1089,15 +1102,15 @@ h6 {
     }
 }
 
-@supports (right: clamp( -17.8125rem , -36.8526541044rem  +  30.7105451391vw , 0.0000000625rem )) {
+@supports (right: clamp( -18.75rem , -38.7922674748rem  +  32.3268896144vw , 0.0000000625rem )) {
     .hero-section::after {
-      right: clamp( -17.8125rem , -36.8526541044rem  +  30.7105451391vw , 0.0000000625rem );
+      right: clamp( -18.75rem , -38.7922674748rem  +  32.3268896144vw , 0.0000000625rem );
     }
 }
 
-@supports not (right: clamp( -17.8125rem , -36.8526541044rem  +  30.7105451391vw , 0.0000000625rem )) {
+@supports not (right: clamp( -18.75rem , -38.7922674748rem  +  32.3268896144vw , 0.0000000625rem )) {
     .hero-section::after {
-      right: calc(-17.8125rem + 17.8125000625 * (100vw - 61.99875rem) / 58.00125);
+      right: calc(-18.75rem + 18.7500000625 * (100vw - 61.99875rem) / 58.00125);
     }
 }
 
@@ -1144,6 +1157,20 @@ h6 {
 @supports not (left: clamp( -6.5625rem , -13.0516931822rem  +  10.4666516376vw , -2.5rem )) {
     .hero-section::before {
       left: calc(-6.5625rem + 4.0625 * (100vw - 61.99875rem) / 38.81375);
+    }
+}
+}
+
+@media (min-width: 61.99875em) and (max-width: 118.75em) {
+@supports (top: clamp( -11.25rem , -23.5402304597rem  +  19.8233520187vw , 0.0000000625rem )) {
+    .hero-section::after {
+      top: clamp( -11.25rem , -23.5402304597rem  +  19.8233520187vw , 0.0000000625rem );
+    }
+}
+
+@supports not (top: clamp( -11.25rem , -23.5402304597rem  +  19.8233520187vw , 0.0000000625rem )) {
+    .hero-section::after {
+      top: calc(-11.25rem + 11.2500000625 * (100vw - 61.99875rem) / 56.75125);
     }
 }
 }

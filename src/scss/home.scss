@@ -1,5 +1,7 @@
 //====================================================================================================
 .hero-section {
+  overflow: hidden;
+  padding-bottom: toRem(135);
   @include adaptiveValue("padding-top", 267, 240, 0, 1920, 1635);
   @media (max-width: em(1635)) {
     @include adaptiveValue("padding-top", 240, 270, 0, 1516, 1201);

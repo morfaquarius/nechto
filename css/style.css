@@ -340,6 +340,8 @@ h6 {
 */
 
 .hero-section {
+  overflow: hidden;
+  padding-bottom: 8.4375rem;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;

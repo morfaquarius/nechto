@@ -14,7 +14,7 @@
     @include adaptiveValue("padding-top", 200, 114, 0, 991.98, 360);
   }
   @media (max-width: $mobile) {
-    padding-bottom: toRem(30);
+    padding-bottom: toRem(60);
   }
   position: relative;
   display: flex;
@@ -40,8 +40,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 0;
-    @include adaptiveValue("right", 0, -285, 0, 1920, 991.98);
+    @include adaptiveValue("top", 0, -180, 0, 1900, 991.98);
+    @include adaptiveValue("right", 0, -300, 0, 1920, 991.98);
     user-select: none;
     z-index: -1;
     background: url("@img/icons/decor2.svg") 0 0 no-repeat;
@@ -143,6 +143,9 @@
 
 //====================================================================================================
 .about-section {
+  @media (max-width: $mobile) {
+    padding-bottom: toRem(60);
+  }
   @include adaptiveValue("padding-top", 190, 84);
   display: flex;
   align-items: center;

@@ -1,5 +1,6 @@
 //====================================================================================================
 .hero-section {
+  background: linear-gradient(180deg, rgba(219, 66, 101, 0.2) -8.18%, rgba(219, 66, 101, 0) 47.49%);
   overflow: hidden;
   padding-bottom: toRem(135);
   @include adaptiveValue("padding-top", 267, 240, 0, 1920, 1635);
@@ -94,11 +95,11 @@
   }
   &__arrow-button {
     position: absolute;
-    bottom: -50px;
+    bottom: -60px;
 
     left: 50%;
     transform: translate(-50%, 0);
-    animation: moveUpDown 1s ease-in-out infinite; /* Назначаем анимацию */
+    animation: moveUpDown 1.5s ease-in-out infinite; /* Назначаем анимацию */
     @media (max-width: $tablet) {
       display: none;
     }
@@ -251,8 +252,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    @media (min-width: em(1347)) {
+    @media (min-width: em(1346.98)) {
       justify-content: space-between;
+    }
+    @media (max-width: em(1000)) {
+      row-gap: 30px;
     }
   }
   &__column {
@@ -301,6 +305,15 @@
   }
   &__content {
     flex: 1 1 100%;
+    &:not(:last-child) {
+      margin-bottom: toRem(10);
+    }
+  }
+  &__footer {
+    flex: 1 1 100%;
+
+    display: flex;
+    flex-direction: column;
   }
   &__title {
     font-weight: 600;
@@ -335,18 +348,23 @@
     }
   }
   &--last {
-    @media (max-width: em(1347)) {
+    @media (min-width: em(1000)) and (max-width: em(1346.98)) {
       max-width: 522px;
       flex-direction: row;
       padding: 35px 42px;
       gap: 10px;
-      align-items: center;
       margin-top: toRem(30);
+      max-height: 255px;
       .item-benefit {
         &__image-container {
+          max-height: 185px;
           padding: 0;
+          margin: 0;
         }
         &__footer {
+        }
+        &__content {
+          margin: 0;
         }
       }
     }

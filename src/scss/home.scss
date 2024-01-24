@@ -15,7 +15,7 @@
     @include adaptiveValue("padding-top", 200, 114, 0, 991.98, 360);
   }
   @media (max-width: $mobile) {
-    padding-bottom: toRem(30);
+    padding-bottom: toRem(60);
   }
   position: relative;
   display: flex;
@@ -145,7 +145,7 @@
 //====================================================================================================
 .about-section {
   @media (max-width: $mobile) {
-    padding-bottom: toRem(30);
+    padding-bottom: toRem(60);
   }
   @include adaptiveValue("padding-top", 190, 84);
   display: flex;
@@ -236,7 +236,13 @@
   }
 }
 //========================================================================================================================================================
+.body-section__benefit {
+  background: linear-gradient(180deg, rgba(219, 66, 101, 0) 38.68%, rgba(219, 66, 101, 0.2) 100%);
+}
 .benefit-section {
+  @media (max-width: $mobile) {
+    padding-bottom: toRem(60);
+  }
   @include adaptiveValue("padding-top", 180, 84);
   &__container {
   }
@@ -248,11 +254,13 @@
     }
   }
   &__items {
-    margin: 0 -40.5px;
+    // margin: 0 -40.5px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    column-gap: 80.1px;
+    flex-wrap: wrap;
     @media (min-width: em(1346.98)) {
+      flex-wrap: nowrap;
       justify-content: space-between;
     }
     @media (max-width: em(1000)) {
@@ -260,10 +268,11 @@
     }
   }
   &__column {
-    padding: 0px 40.5px;
+    // padding: 0 40.5px;
+    flex: 0 1 25%;
+    max-width: 266px;
   }
   &__item {
-    max-width: 266px;
     height: 100%;
   }
 }
@@ -349,7 +358,7 @@
   }
   &--last {
     @media (min-width: em(1000)) and (max-width: em(1346.98)) {
-      max-width: 522px;
+      width: 522px;
       flex-direction: row;
       padding: 35px 42px;
       gap: 10px;
@@ -367,6 +376,33 @@
           margin: 0;
         }
       }
+    }
+  }
+}
+.column-benefit--last {
+  @media (max-width: em(1346.98)) {
+    max-width: 522px;
+  }
+}
+
+.about-section {
+  &__image {
+    opacity: 0;
+    transition: all 4s;
+  }
+  &__content {
+    opacity: 0;
+    transition: all 7s;
+  }
+}
+
+.active-section {
+  .about-section {
+    &__image {
+      opacity: 1;
+    }
+    &__content {
+      opacity: 1;
     }
   }
 }

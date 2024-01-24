@@ -563,6 +563,11 @@ h6 {
   background-color: #db4265;
 }
 
+.body-section__benefit {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(38.68%, rgba(219, 66, 101, 0)), to(rgba(219, 66, 101, 0.2)));
+  background: linear-gradient(180deg, rgba(219, 66, 101, 0) 38.68%, rgba(219, 66, 101, 0.2) 100%);
+}
+
 .benefit-section__title {
   text-align: center;
 }
@@ -572,23 +577,27 @@ h6 {
 }
 
 .benefit-section__items {
-  margin: 0 -40.5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-column-gap: 80.1px;
+     -moz-column-gap: 80.1px;
+          column-gap: 80.1px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .benefit-section__column {
-  padding: 0px 40.5px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+  max-width: 266px;
 }
 
 .benefit-section__item {
-  max-width: 266px;
   height: 100%;
 }
 
@@ -697,6 +706,26 @@ h6 {
   transition: all 0.3s;
 }
 
+.about-section__image {
+  opacity: 0;
+  -webkit-transition: all 4s;
+  transition: all 4s;
+}
+
+.about-section__content {
+  opacity: 0;
+  -webkit-transition: all 7s;
+  transition: all 7s;
+}
+
+.active-section .about-section__image {
+  opacity: 1;
+}
+
+.active-section .about-section__content {
+  opacity: 1;
+}
+
 @media (min-width: 61.99875em) {
   .hero-section__items {
     gap: 35px;
@@ -705,6 +734,8 @@ h6 {
 
 @media (min-width: 84.18625em) {
   .benefit-section__items {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -862,6 +893,12 @@ h6 {
   }
 }
 
+@media (max-width: 84.18625em) {
+  .column-benefit--last {
+    max-width: 522px;
+  }
+}
+
 @media (max-width: 62.5em) {
   .benefit-section__items {
     row-gap: 30px;
@@ -945,15 +982,19 @@ h6 {
   }
 
   .hero-section {
-    padding-bottom: 1.875rem;
+    padding-bottom: 3.75rem;
   }
 
   .about-section {
-    padding-bottom: 1.875rem;
+    padding-bottom: 3.75rem;
   }
 
   .image-about {
     max-width: 265px;
+  }
+
+  .benefit-section {
+    padding-bottom: 3.75rem;
   }
 }
 
@@ -1405,7 +1446,7 @@ h6 {
 
 @media (min-width: 62.5em) and (max-width: 84.18625em) {
   .item-benefit--last {
-    max-width: 522px;
+    width: 522px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;

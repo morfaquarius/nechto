@@ -647,6 +647,10 @@ export class FullPage {
 	}
 }
 // Запускаем и добавляем в объект модулей
-if (document.querySelector('[data-fp]')) {
-	flsModules.fullpage = new FullPage(document.querySelector('[data-fp]'), '');
+function isMobileDevice() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+if (document.querySelector('[data-fp]') && !isMobileDevice()) {
+  flsModules.fullpage = new FullPage(document.querySelector('[data-fp]'), '');
 }

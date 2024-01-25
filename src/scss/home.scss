@@ -385,17 +385,18 @@
   }
 }
 
-.about-section {
-  &__image {
-    opacity: 0;
-    transition: all 4s;
-  }
-  &__content {
-    opacity: 0;
-    transition: all 7s;
+@media (any-hover: hover) {
+  .about-section {
+    &__image {
+      opacity: 0;
+      transition: all 2s;
+    }
+    &__content {
+      opacity: 0;
+      transition: all 4s;
+    }
   }
 }
-
 .active-section {
   .about-section {
     &__image {

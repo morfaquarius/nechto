@@ -144,9 +144,6 @@
 
 //====================================================================================================
 .about-section {
-  @media (max-width: $mobile) {
-    padding-bottom: toRem(60);
-  }
   @include adaptiveValue("padding-top", 190, 84);
   display: flex;
   align-items: center;
@@ -240,9 +237,6 @@
   background: linear-gradient(180deg, rgba(219, 66, 101, 0) 38.68%, rgba(219, 66, 101, 0.2) 100%);
 }
 .benefit-section {
-  @media (max-width: $mobile) {
-    padding-bottom: toRem(60);
-  }
   @include adaptiveValue("padding-top", 180, 84);
   &__container {
   }
@@ -395,6 +389,15 @@
       opacity: 0;
       transition: all 4s;
     }
+  }
+  .hero-section {
+    padding-bottom: toRem(30);
+  }
+  .about-section {
+    padding-bottom: toRem(30);
+  }
+  .benefits-section {
+    padding-bottom: toRem(30);
   }
 }
 .active-section {

@@ -706,18 +706,6 @@ h6 {
   transition: all 0.3s;
 }
 
-.about-section__image {
-  opacity: 0;
-  -webkit-transition: all 4s;
-  transition: all 4s;
-}
-
-.about-section__content {
-  opacity: 0;
-  -webkit-transition: all 7s;
-  transition: all 7s;
-}
-
 .active-section .about-section__image {
   opacity: 1;
 }
@@ -1480,5 +1468,17 @@ h6 {
   .item-benefit__button:hover {
     color: white;
     background: #db4265;
+  }
+
+  .about-section__image {
+    opacity: 0;
+    -webkit-transition: all 2s;
+    transition: all 2s;
+  }
+
+  .about-section__content {
+    opacity: 0;
+    -webkit-transition: all 4s;
+    transition: all 4s;
   }
 }

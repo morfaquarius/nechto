@@ -1,3 +1,66 @@
 //====================================================================================================
+.footer {
+  background: linear-gradient(180deg, #db4265 20.03%, rgba(43, 43, 43, 0.3) 222.9%), #db4265;
+  color: white;
+  &__container {
+    max-width: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  &__consultation {
+    padding: 73px 0;
+  }
+  &__contacts {
+    background: rgba(43, 43, 43, 0.7);
+    backdrop-filter: blur(50px);
+    width: 100%;
+    padding: 25px 0;
+  }
+}
+.consultation-footer {
+  max-width: 810px;
+  margin: 0 auto;
+  &__title {
+    text-align: center;
+    @include adaptiveValue("font-size", 40, 20);
+    font-weight: 600;
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 40, 25);
+    }
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    @include adaptiveValue("font-size", 30, 16);
+  }
+  &__button-consultation {
+    border-radius: 20px;
+    background: #fff;
+    color: black;
+    padding: 20px 13px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    font-weight: 600;
+  }
+  &__button-telegram {
+    border-radius: 20px;
+    border: 3px solid #fff;
+    padding: 20px 13px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    font-weight: 500;
+  }
+}
+.contacts-footer {
+  &__title {
+    text-align: center;
+    @include adaptiveValue("font-size", 28, 20);
+    font-weight: 600;
+  }
+}
 
 //====================================================================================================

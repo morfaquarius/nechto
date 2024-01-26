@@ -2,20 +2,19 @@
 .hero-section {
   background: linear-gradient(180deg, rgba(219, 66, 101, 0.2) -8.18%, rgba(219, 66, 101, 0) 47.49%);
   overflow: hidden;
-  padding-bottom: toRem(135);
+  @media (any-hover: hover) {
+    padding-bottom: toRem(135);
+  }
   @include adaptiveValue("padding-top", 267, 240, 0, 1920, 1635);
   @media (max-width: em(1635)) {
     @include adaptiveValue("padding-top", 240, 270, 0, 1516, 1201);
   }
   @media (max-width: em(1200)) {
-    padding-top: 200px;
+    padding-top: toRem(200);
   }
 
   @media (max-width: $tablet) {
     @include adaptiveValue("padding-top", 200, 114, 0, 991.98, 360);
-  }
-  @media (max-width: $mobile) {
-    padding-bottom: toRem(60);
   }
   position: relative;
   display: flex;
@@ -144,7 +143,7 @@
 
 //====================================================================================================
 .about-section {
-  @include adaptiveValue("padding-top", 190, 84);
+  @include adaptiveValue("padding-top", 190, 54);
   display: flex;
   align-items: center;
   &__container {
@@ -237,13 +236,13 @@
   background: linear-gradient(180deg, rgba(219, 66, 101, 0) 38.68%, rgba(219, 66, 101, 0.2) 100%);
 }
 .benefit-section {
-  @include adaptiveValue("padding-top", 180, 84);
+  @include adaptiveValue("padding-top", 124, 54);
+  @include adaptiveValue("padding-bottom", 220, 37);
   &__container {
   }
   &__title {
     text-align: center;
     &:not(:last-child) {
-      margin-bottom: toRem(70);
       @include adaptiveValue("margin-bottom", 70, 30);
     }
   }
@@ -270,8 +269,7 @@
     height: 100%;
   }
 }
-.title {
-}
+
 .item-benefit {
   overflow: hidden;
   display: flex;
@@ -389,15 +387,6 @@
       opacity: 0;
       transition: all 4s;
     }
-  }
-  .hero-section {
-    padding-bottom: toRem(30);
-  }
-  .about-section {
-    padding-bottom: toRem(30);
-  }
-  .benefits-section {
-    padding-bottom: toRem(30);
   }
 }
 .active-section {

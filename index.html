@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240127003246">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240128225810">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,9 +20,15 @@
 					<nav class="menu__body">
 						<ul class="menu__list">
 
-							<li class="menu__item undefined"><a href="" class="menu__link ">Обо мне</a></li>
-							<li class="menu__item undefined"><a href="" class="menu__link ">Услуги</a></li>
-							<li class="menu__item undefined"><a href="" class="menu__link">Контакты</a></li>
+							<li class="menu__item undefined">
+								<div data-goto=".about-section" class="menu__link ">Обо мне</div>
+							</li>
+							<li class="menu__item undefined">
+								<div data-goto=".benefit-section" class="menu__link ">Услуги</div>
+							</li>
+							<li class="menu__item undefined">
+								<div data-goto=".footer__contacts" class="menu__link">Контакты</div>
+							</li>
 
 							<li class="menu__item --header-off"><a href="index.html" class="menu__link">Вернуться на главную страницу</a>
 
@@ -175,12 +181,27 @@
 								<h2 class="consultation-footer__title">Сделай первый шаг к счастливой себе, запишись на бесплатную консультацию!
 								</h2>
 								<div class="consultation-footer__buttons">
-									<a href="" class="consultation-footer__button-consultation">Записаться на бесплатную консультацию</a>
-									<a href="" class="consultation-footer__button-telegram">Подписаться на телеграм канал</a>
+									<a href="t.me/lyu_dmi_la" class="consultation-footer__button-consultation">Записаться на бесплатную
+										консультацию</a>
+									<a href="https://t.me/art_pro_women" class="consultation-footer__button-telegram">Подписаться на телеграм
+										канал</a>
 								</div>
 							</div>
 							<div class="footer__contacts contacts-footer">
-								<h3 class="contacts-footer__title">Мои контакты</h3>
+								<div class="contacts-footer__box">
+									<h3 class="contacts-footer__title">Мои контакты</h3>
+									<div class="contacts-footer__social social-footer">
+										<a href="instagram.com/lyu.dmi.la?" class="social-footer__item">
+											<img src="img/icons/inst.svg" alt="">
+										</a>
+										<a href="t.me/lyu_dmi_la" class="social-footer__item">
+											<img src="img/icons/telegram.svg" alt="">
+										</a>
+										<a href="wa.me/7-926-429-11-91" class="social-footer__item">
+											<img src="img/icons/whatsapp.svg" alt="">
+										</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</footer>
@@ -188,7 +209,7 @@
 			</div>
 		</main>
 	</div>
-	<script src="js/app.min.js?_v=20240127003246"></script>
+	<script src="js/app.min.js?_v=20240128225810"></script>
 </body>
 
 </html>

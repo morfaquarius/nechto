@@ -14,7 +14,7 @@
   }
 
   @media (max-width: $tablet) {
-    @include adaptiveValue("padding-top", 200, 114, 0, 991.98, 360);
+    @include adaptiveValue("padding-top", 200, 85, 0, 991.98, 360);
   }
   position: relative;
   display: flex;
@@ -175,8 +175,8 @@
     padding: 20px 25px;
     max-width: 348px;
   }
-  @media (max-width: $mobile) {
-    max-width: 265px;
+  @media (max-width: $mobileSmall) {
+    max-width: 316px;
   }
   &__photo-ibg {
     padding-bottom: percent(456, 344);

@@ -2,29 +2,80 @@
 .footer {
   background: linear-gradient(180deg, #db4265 20.03%, rgba(43, 43, 43, 0.3) 222.9%), #db4265;
   color: white;
+
   &__container {
     max-width: none;
     padding: 0;
     display: flex;
     flex-direction: column;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 343.33px;
+      height: 646px;
+      @include adaptiveValue("left", 0, -135, 0, 1410, 991.98);
+      @include adaptiveValue("bottom", 0, -50, 0, 1410, 991.98);
+      background: url("@img/icons/decor3.svg") 0 0 no-repeat;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 564.934px;
+      height: 733.8px;
+      bottom: 0;
+      @include adaptiveValue("right", 0, -260, 0, 1920, 991.98);
+      @include adaptiveValue("bottom", 0, -140, 0, 1410, 991.98);
+      background: url("@img/icons/decor4.svg") 0 0 no-repeat;
+    }
+    &::before,
+    &::after {
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
   }
   &__consultation {
-    padding: 73px 0;
   }
   &__contacts {
     background: rgba(43, 43, 43, 0.7);
     backdrop-filter: blur(50px);
     width: 100%;
-    padding: 25px 0;
+    padding-top: toRem(25);
+    padding-bottom: toRem(25);
+    @media (max-width: em(360)) {
+      padding-top: toRem(10);
+      padding-bottom: toRem(10);
+    }
   }
 }
 .consultation-footer {
   max-width: 810px;
   margin: 0 auto;
+  @include adaptiveValue("padding-top", 73, 88, 0, 1920, 991.98);
+  @include adaptiveValue("padding-bottom", 73, 88, 0, 1920, 991.98);
+  @media (max-width: $tablet) {
+    @include adaptiveValue("padding-top", 88, 19, 0, 991.98, 360);
+    @include adaptiveValue("padding-bottom", 88, 19, 0, 991.98, 360);
+  }
+  padding-right: toRem(20);
+  padding-left: toRem(20);
+  box-sizing: content-box;
   &__title {
     text-align: center;
     @include adaptiveValue("font-size", 40, 20);
     font-weight: 600;
+    max-width: 806px;
+    @media (max-width: em(1080)) {
+      max-width: 660px;
+    }
+    @media (max-width: $mobile) {
+      max-width: 620px;
+    }
+    @media (max-width: $mobileSmall) {
+      max-width: 387px;
+    }
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 40, 25);
     }
@@ -33,33 +84,74 @@
     display: flex;
     flex-direction: column;
     row-gap: 15px;
+    align-items: center;
     @include adaptiveValue("font-size", 30, 16);
   }
   &__button-consultation {
     border-radius: 20px;
     background: #fff;
     color: black;
-    padding: 20px 13px;
+    @include adaptiveValue("padding-left", 50.5, 23);
+    @include adaptiveValue("padding-right", 50.5, 23);
+    @include adaptiveValue("padding-top", 20, 15);
+    @include adaptiveValue("padding-bottom", 20, 15);
     text-align: center;
     display: inline-flex;
     justify-content: center;
     font-weight: 600;
+    @media (any-hover: hover) {
+      &:hover {
+        transition: all 0.3s;
+        box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.25);
+      }
+    }
   }
   &__button-telegram {
     border-radius: 20px;
     border: 3px solid #fff;
-    padding: 20px 13px;
+    @include adaptiveValue("padding-left", 40, 20.5);
+    @include adaptiveValue("padding-right", 40, 20.5);
+    @include adaptiveValue("padding-top", 20, 15);
+    @include adaptiveValue("padding-bottom", 20, 15);
     text-align: center;
     display: inline-flex;
     justify-content: center;
     font-weight: 500;
+    max-width: 551px;
+    @media (any-hover: hover) {
+      &:hover {
+        transition: all 0.4s;
+        background: #54c5ff;
+      }
+    }
   }
 }
 .contacts-footer {
+  position: relative;
+  z-index: 10;
+  &__box {
+    margin: 0 auto;
+    max-width: 1410px;
+    box-sizing: content-box;
+    padding: 0 20px;
+  }
   &__title {
     text-align: center;
     @include adaptiveValue("font-size", 28, 20);
     font-weight: 600;
+    &:not(:last-child) {
+      margin-bottom: toRem(15);
+    }
+  }
+  &__social {
+  }
+}
+
+.social-footer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  &__item {
   }
 }
 

@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240128225810">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240129194822">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,17 +19,15 @@
 				<div class="header__menu menu">
 					<nav class="menu__body">
 						<ul class="menu__list">
-
+							<li class="menu__item undefined">
+								<div data-goto=".hero-section" class="menu__link">Титульник</div>
+							</li>
 							<li class="menu__item undefined">
 								<div data-goto=".about-section" class="menu__link ">Обо мне</div>
 							</li>
 							<li class="menu__item undefined">
 								<div data-goto=".benefit-section" class="menu__link ">Услуги</div>
 							</li>
-							<li class="menu__item undefined">
-								<div data-goto=".footer__contacts" class="menu__link">Контакты</div>
-							</li>
-
 							<li class="menu__item --header-off"><a href="index.html" class="menu__link">Вернуться на главную страницу</a>
 
 							</li>
@@ -47,10 +45,10 @@
 								<div class="hero-section__item --item-content">
 									<div class="hero-section__content">
 										<h1 class="hero-section__title">Каждая женщина достойна быть счастливой!</h1>
-										<div class="hero-section__text">Я искренне верю, что в этом мире нет несчастных женщин. Есть те, кто еще не
+										<p class="hero-section__text">Я искренне верю, что в этом мире нет несчастных женщин. Есть те, кто еще не
 											научился верить в себя, свои силы, свои возможности… проживать свою настоящую жизнь и получать от нее и от
 											себя
-											удовольствие!</div>
+											удовольствие!</p>
 									</div>
 								</div>
 								<div class="hero-section__item --item-image">
@@ -59,8 +57,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="hero-section__arrow-button">
-								<img src="img/icons/arrow-bottom.svg" alt="">
+							<div data-goto=".about-section" class="hero-section__arrow-button">
+								<img src="img/icons/arrow-bottom.svg" alt="arrow">
 							</div>
 						</div>
 					</section>
@@ -70,9 +68,9 @@
 						<div class="about-section__container">
 							<div class="about-section__image image-about">
 								<div class="image-about__photo-ibg">
-									<picture><source srcset="img/about/aboutme.webp" type="image/webp"><img src="img/about/aboutme.jpg" alt=""></picture>
+									<picture><source srcset="img/about/aboutme.webp" type="image/webp"><img src="img/about/aboutme.jpg" alt="woman"></picture>
 								</div>
-								<div class="image-about__title">Дьяченко Людмила</div>
+								<h4 class="image-about__title">Дьяченко Людмила</h4>
 								<div class="image-about__text">Психолог, сексолог, арт-терапевт</div>
 							</div>
 							<div class="about-section__content content-about">
@@ -105,11 +103,11 @@
 									<div class="benefit-section__item item-benefit">
 										<div class="item-benefit__image-container">
 											<div class="item-benefit__image">
-												<picture><source srcset="img/benefit/people1.webp" type="image/webp"><img src="img/benefit/people1.png" alt=""></picture>
+												<picture><source srcset="img/benefit/people1.webp" type="image/webp"><img src="img/benefit/people1.png" alt="people"></picture>
 											</div>
 										</div>
 										<div class="item-benefit__content">
-											<div class="item-benefit__title">Индивидуальная терапия</div>
+											<h4 class="item-benefit__title">Индивидуальная терапия</h4>
 											<div class="item-benefit__text">Глубокая проработка Вашего запроса.</div>
 										</div>
 										<div class="item-benefit__button-container">
@@ -122,12 +120,12 @@
 									<div class="benefit-section__item item-benefit">
 										<div class="item-benefit__image-container">
 											<div class="item-benefit__image">
-												<picture><source srcset="img/benefit/people2.webp" type="image/webp"><img src="img/benefit/people2.png" alt=""></picture>
+												<picture><source srcset="img/benefit/people2.webp" type="image/webp"><img src="img/benefit/people2.png" alt="people"></picture>
 											</div>
 										</div>
 										<div class="item-benefit__content">
 
-											<div class="item-benefit__title">Групповая терапия</div>
+											<h4 class="item-benefit__title">Групповая терапия</h4>
 											<div class="item-benefit__text">Открой себя: Вместе к гармонии женской сексуальности!</div>
 										</div>
 										<div class="item-benefit__button-container">
@@ -140,11 +138,11 @@
 									<div class="benefit-section__item item-benefit">
 										<div class="item-benefit__image-container">
 											<div class="item-benefit__image">
-												<picture><source srcset="img/benefit/people3.webp" type="image/webp"><img src="img/benefit/people3.png" alt=""></picture>
+												<picture><source srcset="img/benefit/people3.webp" type="image/webp"><img src="img/benefit/people3.png" alt="people"></picture>
 											</div>
 										</div>
 										<div class="item-benefit__content">
-											<div class="item-benefit__title">Полное погружение</div>
+											<h4 class="item-benefit__title">Полное погружение</h4>
 											<div class="item-benefit__text">Измени себя, измени мир: Полное преображение.</div>
 										</div>
 										<div class="item-benefit__button-container">
@@ -157,12 +155,12 @@
 									<div class="benefit-section__item item-benefit  item-benefit--last">
 										<div class="item-benefit__image-container">
 											<div class="item-benefit__image">
-												<picture><source srcset="img/benefit/people4.webp" type="image/webp"><img src="img/benefit/people4.png" alt=""></picture>
+												<picture><source srcset="img/benefit/people4.webp" type="image/webp"><img src="img/benefit/people4.png" alt="people"></picture>
 											</div>
 										</div>
 										<div class="item-benefit__footer">
 											<div class="item-benefit__content">
-												<div class="item-benefit__title">Игра "Встреча с собой"</div>
+												<h4 class="item-benefit__title">Игра "Встреча с собой"</h4>
 												<div class="item-benefit__text">Трансформационная психологическая игра.</div>
 											</div>
 											<div class="item-benefit__button-container">
@@ -181,9 +179,10 @@
 								<h2 class="consultation-footer__title">Сделай первый шаг к счастливой себе, запишись на бесплатную консультацию!
 								</h2>
 								<div class="consultation-footer__buttons">
-									<a href="t.me/lyu_dmi_la" class="consultation-footer__button-consultation">Записаться на бесплатную
+									<a target="_blank" href="https://www.t.me/lyu_dmi_la" class="consultation-footer__button-consultation">Записаться на бесплатную
 										консультацию</a>
-									<a href="https://t.me/art_pro_women" class="consultation-footer__button-telegram">Подписаться на телеграм
+									<a target="_blank" href="https://t.me/art_pro_women" class="consultation-footer__button-telegram">Подписаться на
+										телеграм
 										канал</a>
 								</div>
 							</div>
@@ -191,14 +190,14 @@
 								<div class="contacts-footer__box">
 									<h3 class="contacts-footer__title">Мои контакты</h3>
 									<div class="contacts-footer__social social-footer">
-										<a href="instagram.com/lyu.dmi.la?" class="social-footer__item">
-											<img src="img/icons/inst.svg" alt="">
+										<a target="_blank" href="https://www.instagram.com/lyu.dmi.la" class="social-footer__item">
+											<img src="img/icons/inst.svg" alt="instagram">
 										</a>
-										<a href="t.me/lyu_dmi_la" class="social-footer__item">
-											<img src="img/icons/telegram.svg" alt="">
+										<a target="_blank" href="https://t.me/lyu_dmi_la" class="social-footer__item">
+											<img src="img/icons/telegram.svg" alt="telegram">
 										</a>
-										<a href="wa.me/7-926-429-11-91" class="social-footer__item">
-											<img src="img/icons/whatsapp.svg" alt="">
+										<a target="_blank" href="https://api.whatsapp.com/send?phone=79264291191" class="social-footer__item">
+											<img src="img/icons/whatsapp.svg" alt="whatsapp">
 										</a>
 									</div>
 								</div>
@@ -209,7 +208,7 @@
 			</div>
 		</main>
 	</div>
-	<script src="js/app.min.js?_v=20240128225810"></script>
+	<script src="js/app.min.js?_v=20240129194822"></script>
 </body>
 
 </html>

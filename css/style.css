@@ -542,7 +542,8 @@ h6 {
 
 .hero-section__arrow-button {
   position: absolute;
-  bottom: -60px;
+  bottom: -65px;
+  cursor: pointer;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
       -ms-transform: translate(-50%, 0);

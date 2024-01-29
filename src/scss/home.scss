@@ -94,8 +94,8 @@
   }
   &__arrow-button {
     position: absolute;
-    bottom: -60px;
-
+    bottom: -65px;
+    cursor: pointer;
     left: 50%;
     transform: translate(-50%, 0);
     animation: moveUpDown 1.5s ease-in-out infinite; /* Назначаем анимацию */
@@ -247,7 +247,6 @@
     }
   }
   &__items {
-    // margin: 0 -40.5px;
     display: flex;
     justify-content: center;
     column-gap: 80.1px;
@@ -261,7 +260,6 @@
     }
   }
   &__column {
-    // padding: 0 40.5px;
     flex: 0 1 25%;
     max-width: 266px;
   }

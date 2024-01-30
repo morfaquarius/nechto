@@ -1101,6 +1101,9 @@ h6 {
 @media (max-width: 62.5em) {
   .benefit-section__items {
     row-gap: 30px;
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
   }
 }
 

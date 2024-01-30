@@ -260,6 +260,7 @@
     }
     @media (max-width: em(1000)) {
       row-gap: 30px;
+      column-gap: 0;
     }
   }
   &__column {

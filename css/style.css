@@ -1188,7 +1188,7 @@ h6 {
   }
 }
 
-@media (max-width: 61.99875em) and (max-width: 22.5em) {
+@media (max-width: 61.99875em) and (max-width: 22.1875em) {
   .consultation-footer {
     padding-top: 1.1875rem;
   }
@@ -1200,9 +1200,7 @@ h6 {
   .hero-section {
     padding-top: 5.3125rem;
   }
-}
 
-@media (max-width: 61.99875em) and (max-width: 22.1875em) {
   .hero-section__title:not(:last-child) {
     margin-bottom: 0.625rem;
   }
@@ -1279,6 +1277,11 @@ h6 {
 
   .menu__link {
     font-size: 1.125rem;
+  }
+
+  .footer__contacts {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
   }
 
   .consultation-footer__title {
@@ -1379,13 +1382,6 @@ h6 {
 
   .item-benefit__title {
     font-size: 1.25rem;
-  }
-}
-
-@media (max-width: 22.5em) {
-  .footer__contacts {
-    padding-top: 0.625rem;
-    padding-bottom: 0.625rem;
   }
 }
 
@@ -1865,40 +1861,40 @@ h6 {
   }
 }
 
-@media (max-width: 61.99875em) and (min-width: 22.5em) and (max-width: 61.99875em) {
-@supports (padding-top: clamp( 1.1875rem , -1.2690650812rem  +  10.9180670274vw , 5.5rem )) {
+@media (max-width: 61.99875em) and (min-width: 22.1875em) and (max-width: 61.99875em) {
+@supports (padding-top: clamp( 1.1875rem , -1.2159310339rem  +  10.8323652234vw , 5.5rem )) {
     .consultation-footer {
-      padding-top: clamp( 1.1875rem , -1.2690650812rem  +  10.9180670274vw , 5.5rem );
+      padding-top: clamp( 1.1875rem , -1.2159310339rem  +  10.8323652234vw , 5.5rem );
     }
 }
 
-@supports not (padding-top: clamp( 1.1875rem , -1.2690650812rem  +  10.9180670274vw , 5.5rem )) {
+@supports not (padding-top: clamp( 1.1875rem , -1.2159310339rem  +  10.8323652234vw , 5.5rem )) {
     .consultation-footer {
-      padding-top: calc(1.1875rem + 4.3125 * (100vw - 22.5rem) / 39.49875);
+      padding-top: calc(1.1875rem + 4.3125 * (100vw - 22.1875rem) / 39.81125);
     }
 }
 
-@supports (padding-bottom: clamp( 1.1875rem , -1.2690650812rem  +  10.9180670274vw , 5.5rem )) {
+@supports (padding-bottom: clamp( 1.1875rem , -1.2159310339rem  +  10.8323652234vw , 5.5rem )) {
     .consultation-footer {
-      padding-bottom: clamp( 1.1875rem , -1.2690650812rem  +  10.9180670274vw , 5.5rem );
+      padding-bottom: clamp( 1.1875rem , -1.2159310339rem  +  10.8323652234vw , 5.5rem );
     }
 }
 
-@supports not (padding-bottom: clamp( 1.1875rem , -1.2690650812rem  +  10.9180670274vw , 5.5rem )) {
+@supports not (padding-bottom: clamp( 1.1875rem , -1.2159310339rem  +  10.8323652234vw , 5.5rem )) {
     .consultation-footer {
-      padding-bottom: calc(1.1875rem + 4.3125 * (100vw - 22.5rem) / 39.49875);
+      padding-bottom: calc(1.1875rem + 4.3125 * (100vw - 22.1875rem) / 39.81125);
     }
 }
 
-@supports (padding-top: clamp( 5.3125rem , 1.2182248647rem  +  18.1967783791vw , 12.5rem )) {
+@supports (padding-top: clamp( 5.3125rem , 1.3067816101rem  +  18.053942039vw , 12.5rem )) {
     .hero-section {
-      padding-top: clamp( 5.3125rem , 1.2182248647rem  +  18.1967783791vw , 12.5rem );
+      padding-top: clamp( 5.3125rem , 1.3067816101rem  +  18.053942039vw , 12.5rem );
     }
 }
 
-@supports not (padding-top: clamp( 5.3125rem , 1.2182248647rem  +  18.1967783791vw , 12.5rem )) {
+@supports not (padding-top: clamp( 5.3125rem , 1.3067816101rem  +  18.053942039vw , 12.5rem )) {
     .hero-section {
-      padding-top: calc(5.3125rem + 7.1875 * (100vw - 22.5rem) / 39.49875);
+      padding-top: calc(5.3125rem + 7.1875 * (100vw - 22.1875rem) / 39.81125);
     }
 }
 }

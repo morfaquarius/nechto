@@ -17,7 +17,7 @@
   }
 
   @media (max-width: $tablet) {
-    @include adaptiveValue("padding-top", 200, 85, 0, 991.98, 360);
+    @include adaptiveValue("padding-top", 200, 85, 0, 991.98, 355);
   }
   position: relative;
   display: flex;

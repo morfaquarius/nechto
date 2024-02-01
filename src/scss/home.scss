@@ -6,7 +6,7 @@
   background: linear-gradient(180deg, rgba(219, 66, 101, 0.2) -8.18%, rgba(219, 66, 101, 0) 47.49%);
   overflow: hidden;
   @media (any-hover: hover) {
-    padding-bottom: toRem(155);
+    padding-bottom: toRem(135);
   }
   @include adaptiveValue("padding-top", 267, 240, 0, 1920, 1635);
   @media (max-width: em(1635)) {

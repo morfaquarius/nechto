@@ -2,18 +2,20 @@
 .footer {
   background: linear-gradient(180deg, #db4265 20.03%, rgba(43, 43, 43, 0.3) 222.9%), #db4265;
   color: white;
-
+  overflow: hidden;
+  padding-top: 220px;
+  @include adaptiveValue("padding-top", 220, 37);
+  background-clip: content-box;
   &__container {
     max-width: none;
     padding: 0;
     display: flex;
     flex-direction: column;
     position: relative;
-
     &::before {
       content: "";
       position: absolute;
-      width: 343.33px;
+      width: 334px;
       height: 646px;
       @include adaptiveValue("left", 0, -135, 0, 1410, 991.98);
       @include adaptiveValue("bottom", 0, -50, 0, 1410, 991.98);
@@ -22,7 +24,7 @@
     &::after {
       content: "";
       position: absolute;
-      width: 564.934px;
+      width: 560px;
       height: 733.8px;
       bottom: 0;
       @include adaptiveValue("right", 0, -260, 0, 1920, 991.98);

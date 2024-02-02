@@ -152,8 +152,21 @@
 .social-footer {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 15px;
   &__item {
+    border-radius: 13px;
+    padding: 10px 10px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+    @media (any-hover: hover) {
+      &:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+    }
+    &--inst {
+      padding: 7.5px 10px;
+    }
   }
 }
 

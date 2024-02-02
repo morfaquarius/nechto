@@ -100,7 +100,7 @@
     cursor: pointer;
     left: 50%;
     transform: translate(-50%, 0);
-    animation: moveUpDown 1.5s ease-in-out infinite; /* Назначаем анимацию */
+    animation: moveUpDown 1.5s ease-in-out infinite;
     @media (max-width: $tablet) {
       display: none;
     }

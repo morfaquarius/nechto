@@ -53,11 +53,11 @@
     object-fit: cover;
   }
 }
-[class*="-ibg--contain"] {
-  img {
-    object-fit: contain;
-  }
-}
+// [class*="-ibg--contain"] {
+//   img {
+//     object-fit: contain;
+//   }
+// }
 
 // Шаблоны (заготовки)
 // @extend %имя шаблона;

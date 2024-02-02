@@ -96,7 +96,7 @@
   }
   &__arrow-button {
     position: absolute;
-    bottom: -65px;
+    bottom: -70px;
     cursor: pointer;
     left: 50%;
     transform: translate(-50%, 0);
@@ -145,7 +145,7 @@
 
 //====================================================================================================
 .about-section {
-  @include adaptiveValue("padding-top", 190, 54);
+  @include adaptiveValue("padding-top", 175, 64);
   display: flex;
   align-items: center;
   &__container {
@@ -269,7 +269,7 @@
   background: linear-gradient(180deg, rgba(219, 66, 101, 0) 38.68%, rgba(219, 66, 101, 0.2) 100%);
 }
 .benefit-section {
-  @include adaptiveValue("padding-top", 124, 54);
+  @include adaptiveValue("padding-top", 124, 64);
   &__container {
   }
   &__title {

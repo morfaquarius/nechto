@@ -1,48 +1,20 @@
 //====================================================================================================
 .footer {
-  background: linear-gradient(180deg, #db4265 20.03%, rgba(43, 43, 43, 0.3) 222.9%), #db4265;
+  background: url("@img/footer/bg-footer.png");
   color: white;
-  overflow: hidden;
-  padding-top: 220px;
-  @include adaptiveValue("padding-top", 220, 37);
-  background-clip: content-box;
+  @include adaptiveValue("padding-top", 140, 37);
   &__container {
     max-width: none;
     padding: 0;
     display: flex;
     flex-direction: column;
     position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 334px;
-      height: 646px;
-      @include adaptiveValue("left", 0, -135, 0, 1410, 991.98);
-      @include adaptiveValue("bottom", 0, -50, 0, 1410, 991.98);
-      background: url("@img/icons/decor3.svg") 0 0 no-repeat;
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      width: 560px;
-      height: 733.8px;
-      bottom: 0;
-      @include adaptiveValue("right", 0, -260, 0, 1920, 991.98);
-      @include adaptiveValue("bottom", 0, -140, 0, 1410, 991.98);
-      background: url("@img/icons/decor4.svg") 0 0 no-repeat;
-    }
-    &::before,
-    &::after {
-      @media (max-width: $mobile) {
-        display: none;
-      }
-    }
   }
   &__consultation {
   }
   &__contacts {
-    background: rgba(43, 43, 43, 0.7);
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(100px);
+    background: rgba(19, 133, 152, 0.7);
     width: 100%;
     padding-top: toRem(25);
     padding-bottom: toRem(25);
@@ -53,17 +25,10 @@
   }
 }
 .consultation-footer {
-  max-width: 810px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px 95px;
+  border-radius: 30px;
   margin: 0 auto;
-  @include adaptiveValue("padding-top", 73, 88, 0, 1920, 991.98);
-  @include adaptiveValue("padding-bottom", 73, 88, 0, 1920, 991.98);
-  @media (max-width: $tablet) {
-    @include adaptiveValue("padding-top", 88, 19, 0, 991.98, 355);
-    @include adaptiveValue("padding-bottom", 88, 19, 0, 991.98, 355);
-  }
-  padding-right: toRem(20);
-  padding-left: toRem(20);
-  box-sizing: content-box;
   &__title {
     text-align: center;
     @include adaptiveValue("font-size", 40, 20);
@@ -129,8 +94,7 @@
   }
 }
 .contacts-footer {
-  position: relative;
-  z-index: 10;
+  @include adaptiveValue("margin-top", 55, 19);
   &__box {
     margin: 0 auto;
     max-width: 1410px;
@@ -157,11 +121,11 @@
   &__item {
     border-radius: 13px;
     padding: 10px 10px;
-    background: rgba(255, 255, 255, 0.1);
     transition: all 0.3s;
+    background: rgba(0, 0, 0, 0.2);
     @media (any-hover: hover) {
       &:hover {
-        background: rgba(255, 255, 255, 0.3);
+        background: rgba(0, 0, 0, 0.3);
       }
     }
     &--inst {

@@ -251,13 +251,12 @@
     display: flex;
     gap: 5px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     img {
       flex: 0 0 30px;
       width: 30px;
       height: 30px;
     }
-
     span {
       font-weight: 600;
     }

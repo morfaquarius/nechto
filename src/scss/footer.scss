@@ -1,6 +1,6 @@
 //====================================================================================================
 .footer {
-  background: url("@img/footer/bg-footer.png") right / cover;
+  background: url("@img/footer/bg-footer.png") right / cover no-repeat;
   color: white;
   @include adaptiveValue("padding-top", 140, 60);
   &__container {

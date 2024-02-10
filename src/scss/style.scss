@@ -63,7 +63,6 @@ $responsiveType: 1;
 
 // Стили тега BODY ============================================================================================================================================================================================================================================================================================================================================================================================
 body {
-  background: url("@img/background.jpg");
   // Скролл заблокирован
   .lock & {
     overflow: hidden;
@@ -80,12 +79,14 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  background: url("@img/background.jpg") no-repeat;
+  background-size: cover;
   @supports (overflow: clip) {
     overflow: clip;
   }
   // Прижимаем footer
   > main {
-    // flex: 1 1 auto;
+    flex: 1 1 auto;
   }
   // Фикс для слайдеров
   > * {
@@ -153,4 +154,5 @@ body {
 @import "footer";
 
 // Подключение стилей отдельных страниц
-@import "home";
+@import "index";
+@import "immersion";

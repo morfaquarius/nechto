@@ -4,9 +4,7 @@
 //====================================================================================================
 .hero-section {
   overflow: hidden;
-  @media (any-hover: hover) {
-    padding-bottom: toRem(135);
-  }
+  @include adaptiveValue("padding-bottom", 135, 0);
   @include adaptiveValue("padding-top", 267, 240, 0, 1920, 1635);
   @media (max-width: em(1635)) {
     @include adaptiveValue("padding-top", 240, 270, 0, 1516, 1201);
@@ -147,7 +145,7 @@
 
 //====================================================================================================
 .about-section {
-  @include adaptiveValue("padding-top", 175, 64);
+  @include adaptiveValue("padding-top", 175, 54);
   display: flex;
   align-items: center;
   &__container {
@@ -239,7 +237,7 @@
         transform: translate(-50%);
         height: 3px;
         width: 88px;
-        background-color: #db4265;
+        background-color: #28ccd1;
       }
     }
   }
@@ -253,16 +251,30 @@
     justify-content: center;
     align-items: flex-start;
     img {
-      flex: 0 0 30px;
-      width: 30px;
-      height: 30px;
+      // flex: 0 0 30px;
+      // width: 30px;
+      // height: 30px;
     }
     span {
       font-weight: 600;
     }
   }
 }
+.line-check {
+  p {
+    display: inline;
 
+    padding-left: toRem(30);
+    background: url("@img/icons/check.svg") left 50% / 25px no-repeat;
+  }
+}
+.line-heart {
+  p {
+    display: inline;
+    padding-left: toRem(30);
+    background: url("@img/icons/heart.svg") left 50% / 25px no-repeat;
+  }
+}
 //========================================================================================================================================================
 .body-section__benefit {
 }

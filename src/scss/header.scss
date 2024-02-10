@@ -38,14 +38,33 @@
     @media (any-hover: hover) {
       &:hover {
         color: rgba(255, 255, 255, 0.7);
+        .menu__link--last {
+          path {
+            fill: rgba(255, 255, 255, 0.7);
+          }
+        }
       }
     }
     @media (max-width: $mobileSmall) {
       flex: 0 1 33.333%;
     }
   }
+  &__link {
+    &--last {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      @media (max-width: $mobileSmall) {
+        p {
+          display: none;
+        }
+      }
+      path {
+        transition: all 0.3s;
+      }
+    }
+  }
 }
-
 //====================================================================================================
 
 //Burger

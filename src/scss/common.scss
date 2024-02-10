@@ -3,3 +3,57 @@
   @include adaptiveValue("font-size", 48, 23);
   font-weight: 600;
 }
+.header-title {
+  text-align: center;
+  &:not(:last-child) {
+    @include adaptiveValue("margin-bottom", 200, 70);
+  }
+  &__title {
+    @include adaptiveValue("font-size", 63, 26);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    img {
+      @include adaptiveValue("width", 79, 35);
+      @include adaptiveValue("height", 79, 35);
+    }
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 110, 39);
+    }
+  }
+  &__subtitle {
+    @include adaptiveValue("font-size", 30, 18);
+    font-weight: 500;
+    color: rgb(0, 0, 0, 0.7);
+  }
+}
+
+.numeric-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+  list-style: none;
+  counter-reset: my-counter;
+  &__item {
+    counter-increment: my-counter;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    &::before {
+      content: counter(my-counter);
+      background: #fff;
+      height: 32px;
+      width: 32px;
+      border: 4px solid #28ccd1;
+      border-radius: 8px;
+      padding: 4.3px 8px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

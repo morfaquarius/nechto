@@ -98,6 +98,7 @@
     }
     @media (min-width: em(1600)) {
       position: fixed;
+      z-index: 10;
       top: 50vh;
       transform: translate(0, -170px);
       border: none;

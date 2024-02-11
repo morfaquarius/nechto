@@ -91,7 +91,7 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 @supports (overflow: clip) {
@@ -1200,6 +1200,7 @@ h6 {
 
   .page-navigation__link {
     position: fixed;
+    z-index: 10;
     top: 50vh;
     -webkit-transform: translate(0, -170px);
         -ms-transform: translate(0, -170px);

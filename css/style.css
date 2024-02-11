@@ -79,7 +79,7 @@ h6 {
 }
 
 .no-webp .wrapper{
-  background: url("../img/background.jpg") no-repeat; }
+  background: url("../img/background.jpg") 0 0/100% 100% no-repeat; }
 
 .wrapper {
   min-height: 100%;
@@ -91,7 +91,6 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden;
-  background-size: 100% 100%;
 }
 
 @supports (overflow: clip) {
@@ -2424,7 +2423,7 @@ h6 {
   }
 }
 
-.webp .wrapper{ background: url(../img/background.webp) no-repeat; }
+.webp .wrapper{ background: url(../img/background.webp) 0 0/100% 100% no-repeat; }
 
 .webp .footer{ background: url(../img/footer/bg-footer.webp) right/cover no-repeat; }
 

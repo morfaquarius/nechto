@@ -12,12 +12,11 @@
     <main class="page">
       <section class="full-immersion">
         <div class="full-immersion__container">
-          <div class="full-immersion__header-title header-title">
-            <h1 class="header-title__title">
-              Полное погружение
-              <img src="@img/icons/curl.svg" alt="curl">
-            </h1>
-            <div class="header-title__subtitle">Измени себя, измени мир: Полное преображение</div>
+          <div class="full-immersion__header-title">
+            @@include('html/_header-title.htm',{
+            "title":"Полное погружение",
+            "subtitle":"Измени себя, измени мир: Полное преображение"
+            })
           </div>
           <div class="full-immersion__body">
             <div class="full-immersion__box">
@@ -38,7 +37,6 @@
                 <li class="numeric-list__item">
                   Полюбить себя.
                 </li>
-
               </ol>
             </div>
             <div class="full-immersion__box">
@@ -70,7 +68,6 @@
                   определенной сферы жизни.</li>
               </ul>
             </div>
-
           </div>
           <div class="full-immersion__body">
             <h2 class="full-immersion__title">Кто поможет тебя стать новой версией себя:</h2>
@@ -101,6 +98,12 @@
           </div>
         </div>
       </section>
+      @@include('html/_page-btn.htm',{
+      "prevTitle": "Групповая террапия",
+      "prevLink": "group-therapy.html",
+      "nextTitle": "Игра «Встреча с собой»",
+      "nextLink": "game-meeting.html"
+      })
     </main>
     @@include('html/_footer.htm',{})
   </div>

@@ -1,6 +1,6 @@
 .full-immersion {
   @include adaptiveValue("padding-top", 220, 95);
-  @include adaptiveValue("padding-bottom", 160, 50);
+  @include adaptiveValue("padding-bottom", 160, 30);
   position: relative;
   &__container {
   }
@@ -20,6 +20,9 @@
     }
   }
   &__text {
+    &:not(:last-child) {
+      margin-bottom: toRem(15);
+    }
     span {
       font-weight: 600;
     }

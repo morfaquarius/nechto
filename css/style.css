@@ -24,8 +24,9 @@ body {
 body {
   color: #000;
   line-height: normal;
-  font-family: "Raleway";
   font-weight: 500;
+  font-family: "Raleway";
+  text-rendering: optimizeLegibility;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -233,15 +234,16 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 15px;
 }
 
 .numeric-list__item::before {
   content: counter(my-counter);
   background: #fff;
+  font-variant-numeric: lining-nums tabular-nums;
   height: 32px;
   width: 32px;
   border: 4px solid #28ccd1;
@@ -956,6 +958,99 @@ h6 {
   font-weight: 600;
 }
 
+.group-therapy__body:not(:last-child) {
+  margin-bottom: 1.875rem;
+}
+
+.group-therapy__text {
+  line-height: 1.54167;
+}
+
+.group-therapy__text span {
+  font-weight: 600;
+}
+
+.group-therapy__text:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.group-therapy__title {
+  font-weight: 600;
+  font-size: 48px;
+  text-align: center;
+}
+
+.group-therapy__title:not(:last-child) {
+  margin-bottom: 0.9375rem;
+}
+
+.individual-therapy__body:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.individual-therapy__text {
+  line-height: 1.54167;
+}
+
+.individual-therapy__text span {
+  font-weight: 600;
+}
+
+.individual-therapy__text:not(:last-child) {
+  margin-bottom: 0.9375rem;
+}
+
+.game-meeting__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.game-meeting__content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 69.36%;
+          flex: 0 1 69.36%;
+}
+
+.game-meeting__text {
+  line-height: 1.66667;
+}
+
+.game-meeting__text:not(:last-child) {
+  margin-bottom: 0.9375rem;
+}
+
+.game-meeting__text span {
+  font-weight: 600;
+}
+
+.game-meeting__list:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.game-meeting__image {
+  text-align: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 29.22%;
+          flex: 0 1 29.22%;
+}
+
+.game-meeting__image img {
+  max-width: 100%;
+  border: 1px solid #000;
+  border-radius: 36px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @media (min-width: 40.125em) {
   .page-navigation {
     -webkit-box-orient: horizontal;
@@ -995,6 +1090,14 @@ h6 {
 
   .title {
     font-size: 3rem;
+  }
+
+  .paddings {
+    padding-top: 13.75rem;
+  }
+
+  .paddings {
+    padding-bottom: 10rem;
   }
 
   .header-title {
@@ -1157,14 +1260,6 @@ h6 {
     font-size: 1.5rem;
   }
 
-  .full-immersion {
-    padding-top: 13.75rem;
-  }
-
-  .full-immersion {
-    padding-bottom: 10rem;
-  }
-
   .full-immersion__body {
     font-size: 1.5rem;
   }
@@ -1312,6 +1407,26 @@ h6 {
   }
 }
 
+@media (max-width: 81.25em) {
+  .game-meeting__body {
+    display: block;
+  }
+
+  .game-meeting__image:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 81.25em) and (max-width: 47.99875em) {
+  .game-meeting__image img {
+    width: 18.25rem;
+  }
+
+  .game-meeting__image img {
+    height: 24.375rem;
+  }
+}
+
 @media (max-width: 62.5em) {
   .benefit-section__items {
     row-gap: 30px;
@@ -1442,6 +1557,14 @@ h6 {
 
   .title {
     font-size: 1.4375rem;
+  }
+
+  .paddings {
+    padding-top: 5.9375rem;
+  }
+
+  .paddings {
+    padding-bottom: 1.875rem;
   }
 
   .header-title {
@@ -1609,14 +1732,6 @@ h6 {
     font-size: 1.25rem;
   }
 
-  .full-immersion {
-    padding-top: 5.9375rem;
-  }
-
-  .full-immersion {
-    padding-bottom: 1.875rem;
-  }
-
   .full-immersion__body {
     font-size: 1.125rem;
   }
@@ -1660,6 +1775,30 @@ h6 {
 @supports not (font-size: clamp( 1.4375rem , 0.9309360731rem  +  2.2831050228vw , 3rem )) {
     .title {
       font-size: calc(1.4375rem + 1.5625 * (100vw - 22.1875rem) / 68.4375);
+    }
+}
+
+@supports (padding-top: clamp( 5.9375rem , 3.4046803653rem  +  11.4155251142vw , 13.75rem )) {
+    .paddings {
+      padding-top: clamp( 5.9375rem , 3.4046803653rem  +  11.4155251142vw , 13.75rem );
+    }
+}
+
+@supports not (padding-top: clamp( 5.9375rem , 3.4046803653rem  +  11.4155251142vw , 13.75rem )) {
+    .paddings {
+      padding-top: calc(5.9375rem + 7.8125 * (100vw - 22.1875rem) / 68.4375);
+    }
+}
+
+@supports (padding-bottom: clamp( 1.875rem , -0.7591324201rem  +  11.8721461187vw , 10rem )) {
+    .paddings {
+      padding-bottom: clamp( 1.875rem , -0.7591324201rem  +  11.8721461187vw , 10rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.875rem , -0.7591324201rem  +  11.8721461187vw , 10rem )) {
+    .paddings {
+      padding-bottom: calc(1.875rem + 8.125 * (100vw - 22.1875rem) / 68.4375);
     }
 }
 
@@ -2143,30 +2282,6 @@ h6 {
     }
 }
 
-@supports (padding-top: clamp( 5.9375rem , 3.4046803653rem  +  11.4155251142vw , 13.75rem )) {
-    .full-immersion {
-      padding-top: clamp( 5.9375rem , 3.4046803653rem  +  11.4155251142vw , 13.75rem );
-    }
-}
-
-@supports not (padding-top: clamp( 5.9375rem , 3.4046803653rem  +  11.4155251142vw , 13.75rem )) {
-    .full-immersion {
-      padding-top: calc(5.9375rem + 7.8125 * (100vw - 22.1875rem) / 68.4375);
-    }
-}
-
-@supports (padding-bottom: clamp( 1.875rem , -0.7591324201rem  +  11.8721461187vw , 10rem )) {
-    .full-immersion {
-      padding-bottom: clamp( 1.875rem , -0.7591324201rem  +  11.8721461187vw , 10rem );
-    }
-}
-
-@supports not (padding-bottom: clamp( 1.875rem , -0.7591324201rem  +  11.8721461187vw , 10rem )) {
-    .full-immersion {
-      padding-bottom: calc(1.875rem + 8.125 * (100vw - 22.1875rem) / 68.4375);
-    }
-}
-
 @supports (font-size: clamp( 1.125rem , 1.0034246575rem  +  0.5479452055vw , 1.5rem )) {
     .full-immersion__body {
       font-size: clamp( 1.125rem , 1.0034246575rem  +  0.5479452055vw , 1.5rem );
@@ -2378,6 +2493,42 @@ h6 {
   .item-benefit--last .item-benefit__content {
     margin: 0;
   }
+}
+
+@media (max-width: 81.25em) and (min-width: 81.25em) {
+  .game-meeting__image img {
+    width: 25.75rem;
+  }
+
+  .game-meeting__image img {
+    height: 30.625rem;
+  }
+}
+
+@media (max-width: 81.25em) and (min-width: 47.99875em) and (max-width: 81.25em) {
+@supports (width: clamp( 18.25rem , 7.4236212924rem  +  22.5555430247vw , 25.75rem )) {
+    .game-meeting__image img {
+      width: clamp( 18.25rem , 7.4236212924rem  +  22.5555430247vw , 25.75rem );
+    }
+}
+
+@supports not (width: clamp( 18.25rem , 7.4236212924rem  +  22.5555430247vw , 25.75rem )) {
+    .game-meeting__image img {
+      width: calc(18.25rem + 7.5 * (100vw - 47.99875rem) / 33.25125);
+    }
+}
+
+@supports (height: clamp( 24.375rem , 15.3530177437rem  +  18.7962858539vw , 30.625rem )) {
+    .game-meeting__image img {
+      height: clamp( 24.375rem , 15.3530177437rem  +  18.7962858539vw , 30.625rem );
+    }
+}
+
+@supports not (height: clamp( 24.375rem , 15.3530177437rem  +  18.7962858539vw , 30.625rem )) {
+    .game-meeting__image img {
+      height: calc(24.375rem + 6.25 * (100vw - 47.99875rem) / 33.25125);
+    }
+}
 }
 
 @media (any-hover: hover) {

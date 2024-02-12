@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Групповая терапия"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{
+    "classOther": "_header-off"
+    })
+    <main class="page">
+      <section class="paddings game-meeting">
+        <div class="game-meeting__container">
+          <div class="game-meeting__header-title">
+            <div class="header-title">
+              <h1 class="header-title__title">
+                Встреча с собой
+                <img src="@img/icons/game.svg" alt="game">
+              </h1>
+              <div class="header-title__subtitle">Трансформационная психологическая игра</div>
+            </div>
+          </div>
+          <div class="game-meeting__body game-meeting">
+            <div class="game-meeting__image">
+              <img src="@img/game-meeting/luydmilla.jpg" alt="woman">
+            </div>
+            <div class="game-meeting__content">
+              <p class="game-meeting__text"><span>
+                  Одна игра заменяет более 3 психологических сессий. Каждый ход в ней дает
+                  глубокую проработку
+                  травм, установок, запретов, помогает ближе познакомиться с собой.
+                </span> Как и в любой психологической
+                трансформационной игре, во "Встрече с собой" важен запрос. Он может быть из любой сферы жизни:</p>
+              <ol class="game-meeting__list numeric-list">
+                <li class="numeric-list__item">
+                  Отношения.
+                </li>
+                <li class="numeric-list__item">
+                  Бизнес.
+                </li>
+                <li class="numeric-list__item">
+                  Карьера-финансы.
+                </li>
+                <li class="numeric-list__item">
+                  Понимание своего предназначения и пути развития.
+                </li>
+                <li class="numeric-list__item">
+                  Достижение гармонии и счастья.
+                </li>
+              </ol>
+              <p class="game-meeting__text"><span>Как проходит игра? </span><br>
+                Офлайн/онлайн в группе 3-5 человек. <br>
+                Время и место можно уточнить в личных сообщениях. <br>
+                Продолжительность около 3-4 часа (зависит от размера группы).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('html/_page-btn.htm',{
+      "prevTitle": "Полное погружение",
+      "prevLink": "immersion.html",
+      "prevLabel":"Полное погружение",
+      "nextTitle": "Индивидуальная терапия",
+      "nextLink": "individual-therapy.html",
+      "nextLabel":"Индивидуальная терапия"
+      })
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

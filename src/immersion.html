@@ -10,13 +10,16 @@
     "classOther": "_header-off"
     })
     <main class="page">
-      <section class="full-immersion">
+      <section class="paddings full-immersion">
         <div class="full-immersion__container">
           <div class="full-immersion__header-title">
-            @@include('html/_header-title.htm',{
-            "title":"Полное погружение",
-            "subtitle":"Измени себя, измени мир: Полное преображение"
-            })
+            <div class="header-title">
+              <h1 class="header-title__title">
+                Полное погружение
+                <img src="@img/icons/curl.svg" alt="curl">
+              </h1>
+              <div class="header-title__subtitle">Измени себя, измени мир: Полное преображение</div>
+            </div>
           </div>
           <div class="full-immersion__body">
             <div class="full-immersion__box">
@@ -101,8 +104,10 @@
       @@include('html/_page-btn.htm',{
       "prevTitle": "Групповая террапия",
       "prevLink": "group-therapy.html",
+      "prevLabel":"Групповая терапия",
       "nextTitle": "Игра «Встреча с собой»",
-      "nextLink": "game-meeting.html"
+      "nextLink": "game-meeting.html",
+      "nextLabel":" Игра «Встреча с собой»"
       })
     </main>
     @@include('html/_footer.htm',{})

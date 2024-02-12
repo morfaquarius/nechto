@@ -1,0 +1,30 @@
+.group-therapy {
+  &__container {
+  }
+  &__header-title {
+  }
+  &__body {
+    &:not(:last-child) {
+      margin-bottom: toRem(30);
+    }
+  }
+  &__text {
+    line-height: 1.54167;
+    span {
+      font-weight: 600;
+    }
+    &:not(:last-child) {
+      margin-bottom: toRem(20);
+    }
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 48px;
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: toRem(15);
+    }
+  }
+  &__list {
+  }
+}

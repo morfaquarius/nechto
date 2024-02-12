@@ -24,10 +24,10 @@ body {
 body {
   color: $mainColor;
   line-height: $lineHeight;
-  font-family: $fontFamily;
-  @include adaptiveValue("font-size", 24, 16);
   font-weight: $fontWeight;
-  //text-rendering: optimizeLegibility;
+  @include adaptiveValue("font-size", 24, 16);
+  font-family: $fontFamily;
+  text-rendering: optimizeLegibility;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

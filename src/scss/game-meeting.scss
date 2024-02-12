@@ -1,0 +1,53 @@
+.paddings {
+}
+.game-meeting {
+  &__container {
+  }
+  &__header-title {
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row-reverse;
+    @media (max-width: em(1300)) {
+      display: block;
+    }
+  }
+  &__content {
+    flex: 0 1 69.36%;
+  }
+  &__text {
+    line-height: 1.66667;
+    &:not(:last-child) {
+      margin-bottom: toRem(15);
+    }
+    span {
+      font-weight: 600;
+    }
+  }
+  &__list {
+    &:not(:last-child) {
+      margin-bottom: toRem(20);
+    }
+  }
+  &__image {
+    text-align: center;
+    @media (max-width: em(1300)) {
+      &:not(:last-child) {
+        margin-bottom: toRem(20);
+      }
+    }
+    flex: 0 1 29.22%;
+    img {
+      max-width: 100%;
+      border: 1px solid #000;
+      border-radius: 36px;
+      object-fit: cover;
+      @media (max-width: em(1300)) {
+        @include adaptiveValue("width", 412, 292, 0, 1300, 767.98);
+        @include adaptiveValue("height", 490, 390, 0, 1300, 767.98);
+      }
+    }
+  }
+}

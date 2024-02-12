@@ -23,11 +23,11 @@ body {
 }
 body {
   color: $mainColor;
-  line-height: 1;
-  font-family: $fontFamily;
-  font-size: $fontSize;
+  line-height: $lineHeight;
   font-weight: $fontWeight;
-  //text-rendering: optimizeLegibility;
+  @include adaptiveValue("font-size", 24, 16);
+  font-family: $fontFamily;
+  text-rendering: optimizeLegibility;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

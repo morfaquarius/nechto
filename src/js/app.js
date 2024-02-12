@@ -12,7 +12,7 @@
 */
 
 // Включить/выключить FLS (Full Logging System) (в работе)
-window['FLS'] = true;
+window['FLS'] = false;
 
 // Подключение основного файла стилей
 import "../scss/style.scss";
@@ -64,7 +64,7 @@ flsFunctions.isWebp();
 // flsFunctions.showMore();
 
 /*
-Модуль "К/После"
+Модуль "До/После"
 Документация: https://template.fls.guru/template-docs/modul-do-pislia.html
 Сниппет (HTML): ba
 */
@@ -190,7 +190,7 @@ autoHeight: false
 // Модуль поэкранной прокрутки
 // Документация: https://template.fls.guru/template-docs/modul-poekrannoj-prokrutki-stranicy-fullpage.html
 // Сниппет(HTML):
-// import './libs/fullpage.js'
+import './libs/fullpage.js'
 
 // Модуль параллакса
 // Документация: https://template.fls.guru/template-docs/paralaks-pri-skroli.html
@@ -202,7 +202,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 
 // Плавная навигация по странице
 // Документация: https://template.fls.guru/template-docs/modul-plavnoj-navigacii-po-stranice.html
-// flsScroll.pageNavigation();
+ flsScroll.pageNavigation();
 
 // Функционал добавления классов к хедеру во время прокрутки
 // Документация: https://template.fls.guru/template-docs/modul-dobavleniya-klassov-k-shapke-pri-prokrutke-stranicy.html

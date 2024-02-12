@@ -21,11 +21,11 @@
 // @import "base/sticky";
 
 // Стили для полноэкранного блока
-// @import "base/fullscreen";
+//@import "base/fullscreen";
 
 // Стили для поэкранной прокрутки
 // Styles for fullpage scroll
-// @import "base/fullpage";
+@import "base/fullpage";
 
 // Стили для ripple эффекта
 // Styles for ripple effect
@@ -34,6 +34,10 @@
 // Стили для кастомного курсора
 // Styles for custom cursor
 // @import "base/cursor";
+
+._header-off {
+  display: none;
+}
 
 // Стили для отзывчивых картинок (IBG)
 // Сниппет (HTML): ibg (div с картинкой и классами)
@@ -49,11 +53,11 @@
     object-fit: cover;
   }
 }
-[class*="-ibg--contain"] {
-  img {
-    object-fit: contain;
-  }
-}
+// [class*="-ibg--contain"] {
+//   img {
+//     object-fit: contain;
+//   }
+// }
 
 // Шаблоны (заготовки)
 // @extend %имя шаблона;

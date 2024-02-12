@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Групповая терапия"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{
+    "classOther": "_header-off"
+    })
+    <main class="page">
+      <section class="paddings individual-therapy">
+        <div class="individual-therapy__container">
+          <div class="individual-therapy__header-title">
+            <div class="header-title">
+              <h1 class="header-title__title">
+                Индивидуальная терапия
+                <img src="@img/icons/puzzle.svg" alt="puzzle">
+              </h1>
+              <div class="header-title__subtitle">Глубокая проработка Вашего запроса.</div>
+            </div>
+          </div>
+          <div class="individual-therapy__body">
+            <p class="individual-therapy__text">
+              <span>Терапия - это изменения. Терапия со мной - это большая трансформация.</span> <br>
+              Мы идем в работу тет-а-тет. Серьезно. Глубоко. Надолго. <br>
+              <span>Только для тех, кто готов работать над собой. Каждая сессия - это огромный пласт работы.</span> В
+              своей работе я использую только научные подходы. Я не люблю подолгу "мусолить" одну и ту же тему.
+            </p>
+          </div>
+          <div class="individual-therapy__body">
+            <p class="individual-therapy__text">Сессии со мной - это больше, чем просто терапия:</p>
+            <ol class="individual-therapy__list numeric-list">
+              <li class="numeric-list__item">
+                Пойти глубже, чем в обычной разговорной терапии, мне позволяет арт-терапия. Это очень мощный инструмент
+                для погружения в самые тайные глубины нашего подсознания.
+              </li>
+              <li class="numeric-list__item">
+                Легче найти "баг" системы, увидеть его и осознать я помогаю при помощи когнитивно-поведенческой терапии,
+                критического мышления и юмора.
+              </li>
+              <li class="numeric-list__item">
+                Найти способ воплотить в жизнь инсайты из сессий, реализовать их в действительности, а не только
+                оставить в разговоре с психологом , вам помогут мои знания в коучинге, краткосрочной ориентированной на
+                решение терапии.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      @@include('html/_page-btn.htm',{
+      "prevTitle": "Игра «Встреча с собой»",
+      "prevLink": "game-meeting.html",
+      "prevLabel":"Игра «Встреча с собой»",
+      "nextTitle": "Групповая террапия",
+      "nextLink": "group-therapy.html",
+      "nextLabel":"Групповая террапия"
+      })
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

@@ -18,6 +18,12 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    &_individual {
+      @media (max-width: em(468.98)) {
+        width: min-content;
+        margin: 0 auto;
+      }
+    }
     img {
       @include adaptiveValue("width", 79, 35);
       @include adaptiveValue("height", 79, 35);

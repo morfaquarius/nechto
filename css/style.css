@@ -2564,7 +2564,7 @@ h6 {
     color: rgba(255, 255, 255, 0.7);
   }
 
-  .menu__item:hover .menu__link--last path {
+  .menu__item:hover .menu__link_last path {
     fill: rgba(255, 255, 255, 0.7);
   }
 

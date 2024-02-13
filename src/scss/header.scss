@@ -28,6 +28,7 @@
       justify-content: space-between;
     }
   }
+
   &__item {
     padding: 10px;
     @include adaptiveValue("font-size", 22, 18);
@@ -38,7 +39,7 @@
     @media (any-hover: hover) {
       &:hover {
         color: rgba(255, 255, 255, 0.7);
-        .menu__link--last {
+        .menu__link_last {
           path {
             fill: rgba(255, 255, 255, 0.7);
           }
@@ -49,6 +50,7 @@
       flex: 0 1 33.333%;
     }
   }
+
   &__link {
     &_last {
       display: flex;

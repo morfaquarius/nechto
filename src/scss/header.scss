@@ -18,14 +18,14 @@
   }
   &__list {
     display: flex;
-    align-items: center;
-    gap: 75px;
     text-align: center;
     @include adaptiveValue("min-height", 70, 50);
     align-items: center;
-    @media (max-width: $mobileSmall) {
-      gap: 5px;
-      justify-content: space-between;
+    gap: 5px;
+    justify-content: space-between;
+    @media (min-width: $mobileSmall) {
+      gap: 75px;
+      justify-content: flex-start;
     }
   }
 
@@ -36,18 +36,17 @@
     font-weight: 400;
     transition: all 0.3s;
     cursor: pointer;
+    flex-basis: 33.333%;
+    @media (min-width: $mobileSmall) {
+      flex-basis: auto;
+    }
     @media (any-hover: hover) {
       &:hover {
         color: rgba(255, 255, 255, 0.7);
-        .menu__link_last {
-          path {
-            fill: rgba(255, 255, 255, 0.7);
-          }
+        .menu__link_last path {
+          fill: rgba(255, 255, 255, 0.7);
         }
       }
-    }
-    @media (max-width: $mobileSmall) {
-      flex: 0 1 33.333%;
     }
   }
 
@@ -56,9 +55,12 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      @media (max-width: $mobileSmall) {
+      p {
+        display: none;
+      }
+      @media (min-width: $mobileSmall) {
         p {
-          display: none;
+          display: block;
         }
       }
       path {

@@ -1,25 +1,22 @@
-.body-section {
-  overflow: hidden;
-}
 //====================================================================================================
 .hero-section {
   overflow: hidden;
-  @include adaptiveValue("padding-bottom", 135, 0);
-  @include adaptiveValue("padding-top", 267, 240, 0, 1920, 1635);
-  @media (max-width: em(1635)) {
-    @include adaptiveValue("padding-top", 240, 270, 0, 1516, 1201);
-  }
-  @media (max-width: em(1200)) {
-    padding-top: toRem(200);
-  }
-
-  @media (max-width: $tablet) {
-    @include adaptiveValue("padding-top", 200, 85, 0, 991.98, 355);
+  @include adaptiveValue("padding-top", 200, 85, 0, 991.98, 355);
+  @media (min-width: $tablet) {
+    @include adaptiveValue("padding-bottom", 135, 0);
+    @include adaptiveValue("padding-top", 267, 240, 0, 1920, 1635);
+    @media (max-width: em(1635)) {
+      @include adaptiveValue("padding-top", 240, 270, 0, 1516, 1201);
+    }
+    @media (max-width: em(1200)) {
+      padding-top: toRem(200);
+    }
   }
   position: relative;
   display: flex;
   align-items: center;
   &::before {
+    display: none;
     content: "";
     width: 807px;
     height: 950px;
@@ -33,11 +30,12 @@
     background: url("@img/hero-section/decor1.png") 0 0 no-repeat;
     user-select: none;
     z-index: 1;
-    @media (max-width: $tablet) {
-      display: none;
+    @media (min-width: $tablet) {
+      display: block;
     }
   }
   &::after {
+    display: none;
     content: "";
     position: absolute;
     @include adaptiveValue("top", 0, -180, 0, 1900, 991.98);
@@ -47,8 +45,8 @@
     background: url("@img/hero-section/decor2.png") 0 0 no-repeat;
     height: 950px;
     width: 735px;
-    @media (max-width: $tablet) {
-      display: none;
+    @media (min-width: $tablet) {
+      display: block;
     }
   }
   &__container {
@@ -56,14 +54,13 @@
   }
   &__items {
     align-items: center;
-    justify-content: space-between;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     @media (min-width: $tablet) {
-      gap: 35px;
-    }
-    @media (max-width: $tablet) {
-      justify-content: center;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 45px;
+      flex-wrap: nowrap;
     }
   }
   &__item {
@@ -169,16 +166,16 @@
 }
 .image-about {
   border-radius: 34px;
-  padding: 30px 35px;
   background: url("@img/background2.jpg");
   color: #fff;
   text-align: center;
-  @media (max-width: $tablet) {
-    padding: 20px 25px;
+  padding: 20px 25px;
+  @media (min-width: $mobileSmall) {
     max-width: 348px;
   }
-  @media (max-width: $mobileSmall) {
-    max-width: 316px;
+  @media (min-width: $tablet) {
+    padding: 30px 35px;
+    max-width: none;
   }
   &__photo-ibg {
     padding-bottom: percent(456, 344);
@@ -248,11 +245,6 @@
     gap: 5px;
     justify-content: center;
     align-items: flex-start;
-    img {
-      // flex: 0 0 30px;
-      // width: 30px;
-      // height: 30px;
-    }
     span {
       font-weight: 600;
     }
@@ -261,7 +253,6 @@
 .line-check {
   p {
     display: inline;
-
     padding-left: toRem(30);
     background: url("@img/icons/check.svg") left 50% / 25px no-repeat;
   }
@@ -274,8 +265,6 @@
   }
 }
 //========================================================================================================================================================
-.body-section__benefit {
-}
 .benefit-section {
   @include adaptiveValue("padding-top", 124, 64);
   @include adaptiveValue("padding-bottom", 170, 37);
@@ -290,17 +279,18 @@
   &__items {
     display: flex;
     justify-content: center;
-    column-gap: 80.1px;
     flex-wrap: wrap;
+    column-gap: 0;
+    row-gap: 30px;
     @media (min-width: em(1346.98)) {
       flex-wrap: nowrap;
       justify-content: space-between;
     }
-    @media (max-width: em(1000)) {
-      row-gap: 30px;
+    @media (min-width: em(1000)) {
+      row-gap: 0;
     }
-    @media (max-width: $mobileSmall) {
-      column-gap: 0;
+    @media (min-width: $mobileSmall) {
+      column-gap: 80.1px;
     }
   }
   &__column {

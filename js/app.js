@@ -134,7 +134,8 @@
             this.nextSectionId = false;
             this.bulletsWrapper = false;
             this.stopEvent = false;
-            if (this.sections.length) this.init();
+            this.isFullScreenEnabled = window.innerHeight <= 1080;
+            if (this.isFullScreenEnabled && this.sections.length) this.init();
         }
         init() {
             if (this.options.idActiveSection > this.sections.length - 1) return;

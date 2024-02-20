@@ -1,130 +1,132 @@
 //====================================================================================================
 .footer {
-  background: url("@img/footer/bg-footer.png") right / cover no-repeat;
-  color: white;
-  @include adaptiveValue("padding-top", 140, 60);
-  &__container {
-    max-width: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  &__consultation {
-  }
-  &__contacts {
-    backdrop-filter: blur(100px);
-    background: rgba(19, 133, 152, 0.7);
-    width: 100%;
-    padding-top: toRem(25);
-    padding-bottom: toRem(25);
-    @media (max-width: em(355)) {
-      padding-top: toRem(10);
-      padding-bottom: toRem(10);
-    }
-  }
+	color: white;
+	background: url("@img/footer/bg-footer.png") right / cover no-repeat;
+	@media (min-width: em(1080.98)) {
+		background: url("@img/footer/bg-footer.png") right / 100% 100% no-repeat;
+	}
+	@include adaptiveValue("padding-top", 140, 60);
+	&__container {
+		max-width: none;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__consultation {
+	}
+	&__contacts {
+		backdrop-filter: blur(100px);
+		background: rgba(19, 133, 152, 0.7);
+		width: 100%;
+		padding-top: toRem(10);
+		padding-bottom: toRem(10);
+		@media (min-width: em(355)) {
+			padding-top: toRem(25);
+			padding-bottom: toRem(25);
+		}
+	}
 }
 .consultation-footer {
-  background: rgba(0, 0, 0, 0.2);
-  padding-top: 20px;
-  padding-bottom: 20px;
-  @include adaptiveValue("padding-left", 95, 15);
-  @include adaptiveValue("padding-right", 95, 15);
-  border-radius: 30px;
-  margin: 0 20px;
+	background: rgba(0, 0, 0, 0.2);
+	padding-top: 20px;
+	padding-bottom: 20px;
+	@include adaptiveValue("padding-left", 95, 15);
+	@include adaptiveValue("padding-right", 95, 15);
+	border-radius: 30px;
+	margin: 0 20px;
 
-  &__title {
-    text-align: center;
-    @include adaptiveValue("font-size", 40, 18);
-    font-weight: 600;
-    max-width: 806px;
-    &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 40, 25);
-    }
-  }
-  &__buttons {
-    display: flex;
-    flex-direction: column;
-    row-gap: 15px;
-    align-items: center;
-    @include adaptiveValue("font-size", 30, 16);
-  }
-  &__button-consultation {
-    border-radius: 20px;
-    background: #fff;
-    color: black;
-    @include adaptiveValue("padding-left", 50.5, 23);
-    @include adaptiveValue("padding-right", 50.5, 23);
-    @include adaptiveValue("padding-top", 20, 15);
-    @include adaptiveValue("padding-bottom", 20, 15);
-    text-align: center;
-    display: inline-flex;
-    justify-content: center;
-    font-weight: 600;
-    @media (any-hover: hover) {
-      &:hover {
-        transition: all 0.3s;
-        box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.25);
-      }
-    }
-  }
-  &__button-telegram {
-    border-radius: 20px;
-    border: 3px solid #fff;
-    @include adaptiveValue("padding-left", 40, 20.5);
-    @include adaptiveValue("padding-right", 40, 20.5);
-    @include adaptiveValue("padding-top", 20, 15);
-    @include adaptiveValue("padding-bottom", 20, 15);
-    text-align: center;
-    display: inline-flex;
-    justify-content: center;
-    font-weight: 500;
-    max-width: 560px;
-    @media (any-hover: hover) {
-      &:hover {
-        transition: all 0.4s;
-        background: #54c5ff;
-      }
-    }
-  }
+	&__title {
+		text-align: center;
+		@include adaptiveValue("font-size", 40, 18);
+		font-weight: 600;
+		max-width: 806px;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 25);
+		}
+	}
+	&__buttons {
+		display: flex;
+		flex-direction: column;
+		row-gap: 15px;
+		align-items: center;
+		@include adaptiveValue("font-size", 30, 16);
+	}
+	&__button-consultation {
+		border-radius: 20px;
+		background: #fff;
+		color: black;
+		@include adaptiveValue("padding-left", 50.5, 23);
+		@include adaptiveValue("padding-right", 50.5, 23);
+		@include adaptiveValue("padding-top", 20, 15);
+		@include adaptiveValue("padding-bottom", 20, 15);
+		text-align: center;
+		display: inline-flex;
+		justify-content: center;
+		font-weight: 600;
+		@media (any-hover: hover) {
+			&:hover {
+				transition: all 0.3s;
+				box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.25);
+			}
+		}
+	}
+	&__button-telegram {
+		border-radius: 20px;
+		border: 3px solid #fff;
+		@include adaptiveValue("padding-left", 40, 20.5);
+		@include adaptiveValue("padding-right", 40, 20.5);
+		@include adaptiveValue("padding-top", 20, 15);
+		@include adaptiveValue("padding-bottom", 20, 15);
+		text-align: center;
+		display: inline-flex;
+		justify-content: center;
+		font-weight: 500;
+		max-width: 560px;
+		@media (any-hover: hover) {
+			&:hover {
+				transition: all 0.4s;
+				background: #54c5ff;
+			}
+		}
+	}
 }
 .contacts-footer {
-  @include adaptiveValue("margin-top", 55, 19);
-  &__box {
-    margin: 0 auto;
-    max-width: 1410px;
-    box-sizing: content-box;
-    padding: 0 20px;
-  }
-  &__title {
-    text-align: center;
-    @include adaptiveValue("font-size", 28, 20);
-    font-weight: 600;
-    &:not(:last-child) {
-      margin-bottom: toRem(15);
-    }
-  }
-  &__social {
-  }
+	@include adaptiveValue("margin-top", 55, 19);
+	&__box {
+		margin: 0 auto;
+		max-width: 1410px;
+		box-sizing: content-box;
+		padding: 0 20px;
+	}
+	&__title {
+		text-align: center;
+		@include adaptiveValue("font-size", 28, 20);
+		font-weight: 600;
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+	&__social {
+	}
 }
 
 .social-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  &__item {
-    border-radius: 13px;
-    padding: 10px 10px;
-    transition: all 0.3s;
-    background: rgba(0, 0, 0, 0.2);
-    @media (any-hover: hover) {
-      &:hover {
-        background: rgba(0, 0, 0, 0.3);
-      }
-    }
-  }
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	&__item {
+		border-radius: 13px;
+		padding: 10px 10px;
+		transition: all 0.3s;
+		background: rgba(0, 0, 0, 0.2);
+		@media (any-hover: hover) {
+			&:hover {
+				background: rgba(0, 0, 0, 0.3);
+			}
+		}
+	}
 }
 //====================================================================================================
